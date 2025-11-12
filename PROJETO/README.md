@@ -1,4 +1,4 @@
-# 🏥 CliniGest: Sistema de Gestão Clínica (Substitui pelo nome do teu projeto)
+# 🏥 CliniGest: Sistema de Gestão Clínica 
 
 ![Licença](https://img.shields.io/badge/license-MIT-blue.svg)
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-blueviolet)
