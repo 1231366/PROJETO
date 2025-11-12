@@ -1,65 +1,102 @@
-# [Start Bootstrap - SB Admin 2](https://startbootstrap.com/theme/sb-admin-2/)
+# 🏥 CliniGest: Sistema de Gestão Clínica (Substitui pelo nome do teu projeto)
 
-[SB Admin 2](https://startbootstrap.com/theme/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
+![Licença](https://img.shields.io/badge/license-MIT-blue.svg)
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-blueviolet)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-4-purple)
+![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
 
-For the legacy Bootstrap 3 version of this theme, you can view the [last stable release](https://github.com/StartBootstrap/startbootstrap-sb-admin-2/releases/tag/v3.3.7%2B1) of SB Admin 2 for Bootstrap 3.
+Um sistema de *dashboard* web robusto para a gestão de clínicas, centros de saúde ou consultórios médicos. Facilita a administração de pacientes, consultas, materiais e utilizadores num único local.
 
-## Preview
+## 📜 Índice
 
-[![SB Admin 2 Preview](https://assets.startbootstrap.com/img/screenshots/themes/sb-admin-2.png)](https://startbootstrap.github.io/startbootstrap-sb-admin-2/)
+* [Sobre o Projeto](#-sobre-o-projeto)
+* [✨ Funcionalidades Principais](#-funcionalidades-principais)
+* [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+* [🛠️ Como Executar](#️-como-executar)
+* [📂 Estrutura de Pastas](#-estrutura-de-pastas)
+* [📄 Licença](#-licença)
 
-**[Launch Live Preview](https://startbootstrap.github.io/startbootstrap-sb-admin-2/)**
+## 📖 Sobre o Projeto
 
-## Status
+Este projeto é uma aplicação web completa construída em **PHP**, desenhada para servir como um painel de controlo administrativo (dashboard) para uma entidade de saúde. Ele utiliza o template **SB Admin 2** (baseado em Bootstrap 4) para uma interface de utilizador limpa, moderna e responsiva.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-sb-admin-2/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-sb-admin-2.svg)](https://www.npmjs.com/package/startbootstrap-sb-admin-2)
-[![Build Status](https://travis-ci.org/StartBootstrap/startbootstrap-sb-admin-2.svg?branch=master)](https://travis-ci.org/StartBootstrap/startbootstrap-sb-admin-2)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin-2/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin-2)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin-2/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin-2?type=dev)
+O sistema permite gerir todos os aspetos do dia-a-dia de uma clínica, desde o registo de pacientes até à gestão de materiais, passando pela marcação de consultas e comunicação interna.
 
-## Download and Installation
+## ✨ Funcionalidades Principais
 
-To begin using this template, choose one of the following options to get started:
+O sistema está dividido por perfis de utilizador (Administrador, Secretário/a, Enfermeiro/a), cada um com as suas permissões específicas.
 
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/sb-admin-2/)
-* Install via npm: `npm i startbootstrap-sb-admin-2`
-* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-sb-admin-2.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-sb-admin-2)
+| Funcionalidade | Descrição |
+| :--- | :--- |
+| **Gestão de Pacientes** | CRUD (Criar, Ler, Atualizar, Apagar) completo de doentes. |
+| **Gestão de Consultas** | Marcação e visualização de consultas num calendário interativo. |
+| **Perfis de Paciente** | Página dedicada com o histórico e detalhes de cada paciente. |
+| **Gestão de Utilizadores** | (Admin) Capacidade de adicionar, editar e remover contas de funcionários. |
+| **Gestão de Stock** | Controlo de Equipamento e Materiais clínicos. |
+| **Indicadores de Saúde** | Gráficos e *dashboards* para monitorizar indicadores (ex: Diabetes, Hipertensão, Saúde Infantil). |
+| **Geração de PDF** | Emissão de documentos, como atestados médicos (`gerar_pdf.php`). |
+| **Mensagens Internas** | Um sistema de chat em tempo real para comunicação entre a equipa. |
+| **Autenticação** | Sistema seguro de Login, Logout e gestão de perfis de utilizador. |
 
-## Usage
+## 🚀 Tecnologias Utilizadas
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+Este projeto é construído com as seguintes tecnologias:
 
-### Gulp Tasks
+* **Backend:**
+    * ![PHP](https://img.shields.io/badge/-PHP-777BB4?style=flat&logo=php&logoColor=white)
+    * ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white) (Inferido, através de `ligacao.php`)
+* **Frontend:**
+    * ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+    * ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+    * ![SASS](https://img.shields.io/badge/-SASS-CC6699?style=flat&logo=sass&logoColor=white) (Compilado via Gulp)
+    * ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+* **Frameworks & Bibliotecas:**
+    * ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white) (Template SB Admin 2)
+    * ![jQuery](https://img.shields.io/badge/-jQuery-0769AD?style=flat&logo=jquery&logoColor=white)
+    * **Chart.js** (Para os gráficos e indicadores)
+    * **DataTables** (Para tabelas interativas)
+    * **Evo Calendar** (Para o calendário de consultas)
+* **Ferramentas (DevOps):**
+    * ![NPM](https://img.shields.io/badge/-NPM-CB3837?style=flat&logo=npm&logoColor=white)
+    * ![Gulp](https://img.shields.io/badge/-Gulp-CF4647?style=flat&logo=gulp&logoColor=white)
 
-* `gulp` the default task that builds everything
-* `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
-* `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-* `gulp js` minifies the themes JS file
-* `gulp vendor` copies dependencies from node_modules to the vendor directory
+## 🛠️ Como Executar
 
-You must have npm installed globally in order to use this build environment. This theme was built using node v11.6.0 and the Gulp CLI v2.0.1. If Gulp is not running properly after running `npm install`, you may need to update node and/or the Gulp CLI locally.
+Para configurar e executar este projeto localmente, segue estes passos:
 
-## Bugs and Issues
+1.  **Requisitos:**
+    * Um servidor web (Apache, Nginx, etc.)
+    * PHP (versão 7.4 ou superior)
+    * Servidor de Base de Dados (MySQL ou MariaDB)
+    * Node.js e NPM (para gerir as dependências de frontend)
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-sb-admin-2/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/theme/sb-admin-2/).
+2.  **Clonar o Repositório:**
+    ```bash
+    git clone [https://github.com/1231366/PROJETO.git](https://github.com/1231366/PROJETO.git)
+    cd PROJETO
+    ```
 
-## About
+3.  **Configurar a Base de Dados:**
+    * Importa o ficheiro `.sql` (se existir) para o teu gestor de BD (ex: phpMyAdmin).
+    * Configura a ligação principal à BD no ficheiro `ligacao.php`.
+    * Configura a ligação à BD para o chat em `Mensagens/php/config.php`.
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+4.  **Instalar Dependências de Frontend:**
+    * O projeto usa `npm` para gerir bibliotecas como Bootstrap, jQuery, etc.
+    ```bash
+    npm install
+    ```
 
-* <https://startbootstrap.com>
-* <https://twitter.com/SBootstrap>
+5.  **Compilar (se necessário):**
+    * O projeto contém um `gulpfile.js`, o que sugere que o SCSS é compilado para CSS. Se fizeste alterações nos ficheiros `.scss`, corre o Gulp.
+    ```bash
+    gulp
+    ```
 
-Start Bootstrap was created by and is maintained by **[David Miller](https://davidmiller.io/)**.
+6.  **Executar:**
+    * Coloca a pasta do projeto no diretório do teu servidor web (ex: `htdocs` no XAMPP, `www` no WAMP).
+    * Acede ao projeto através do teu browser (ex: `http://localhost/PROJETO/`).
 
-* <https://davidmiller.io>
-* <https://twitter.com/davidmillerhere>
-* <https://github.com/davidtmiller>
+## 📂 Estrutura de Pastas
 
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE) license.
+Uma visão geral da organização do projeto:
